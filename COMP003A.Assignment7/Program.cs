@@ -12,7 +12,7 @@
             bool working = true;
             while (working) // Menu loop that keeps the program working until you choose to exit.
             {
-                Console.WriteLine("\nWelcome to the Student Score Analyzer");
+                Console.WriteLine("\nWelcome to the Student Score Analyzer!");
                 Console.WriteLine("1. Display The Scores");
                 Console.WriteLine("2. Show their Total");
                 Console.WriteLine("3. Show their Average");
@@ -58,7 +58,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("\nInvalid choice, Please try again and pick a number between 1 and 4.");
+                    Console.WriteLine("\nInvalid choice, Please try again and ACTUALLY pick a number between 1 and 4.");
                 }
 
                 //This is the try-catch block example
@@ -70,7 +70,7 @@
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Invalid choice");
+                    Console.WriteLine("Invalid choice, Please try again.");
                 }
             }
         
