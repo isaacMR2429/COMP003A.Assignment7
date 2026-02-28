@@ -4,10 +4,13 @@
     {
         static void Main(string[] args)
         {
-            List<int> scores = new List<int> { 85, 90, 78, 92, 88 };
+            // Program's Purpose: This program stores a list of student scores and lets you 
+            // display the values, calculate the total, and calculate the average.
+
+            List<int> scores = new List<int> { 85, 90, 78, 92, 88 }; // Collection declaration of scores
 
             bool working = true;
-            while (working)
+            while (working) // Menu loop that keeps the program working until you choose to exit.
             {
                 Console.WriteLine("\nWelcome to the Student Score Analyzer");
                 Console.WriteLine("1. Display The Scores");
@@ -58,6 +61,7 @@
                     Console.WriteLine("\nInvalid choice, Please try again and pick a number between 1 and 4.");
                 }
 
+                //This is the try-catch block example
                 Console.Write("\nEnter any number to continue: ");
                 string input2 = Console.ReadLine();
                 try
@@ -69,12 +73,12 @@
                     Console.WriteLine("Invalid choice");
                 }
             }
+        
+         // Debugging Evidence
+         // 1. The error I encountered was when the average was rounding down because
+         //    both values were int.
+         // 2. The brief explanation on how I fixed it was changing total to a double before dividing.
+         //    Which allowed the correct decimal value to be displayed.
         }
-        // Debugging Evidence
-        // 1. The error I encountered was when the average was rounding down because
-        // both values were int.
-        // 2. The brief explanation on how I fixed it was changing total to a double before dividing.
-        // Which allowed the correct decimal value to be displayed.
-
     }
 }
