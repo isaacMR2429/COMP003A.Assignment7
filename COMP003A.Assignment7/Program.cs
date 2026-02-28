@@ -70,5 +70,11 @@
                 }
             }
         }
+        // Debugging Evidence
+        // 1. The error I encountered was when the average was rounding down because
+        // both values were int.
+        // 2. The brief explanation on how I fixed it was changing total to a double before dividing.
+        // Which allowed the correct decimal value to be displayed.
+
     }
 }
