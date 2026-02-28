@@ -57,6 +57,17 @@
                 {
                     Console.WriteLine("\nInvalid choice, Please try again and pick a number between 1 and 4.");
                 }
+
+                Console.Write("\nEnter any number to continue: ");
+                string input2 = Console.ReadLine();
+                try
+                {
+                    int number = int.Parse(input2);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid choice");
+                }
             }
         }
     }
