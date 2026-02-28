@@ -16,6 +16,47 @@
                 Console.WriteLine("4. Exit Program");
                 Console.Write("Please Enter your choice: ");
                 string input = Console.ReadLine();
+
+                bool validationNumber = int.TryParse(input, out int choice);
+                if (validationNumber && choice >= 1 && choice <= 4)
+                {
+                    if (choice == 1)
+                    {
+                        Console.WriteLine("\nThe Scores:");
+                        for (int i = 0; i < scores.Count; i++)
+                        {
+                            Console.WriteLine(scores[i]);
+                        }
+                    }
+                    else if (choice == 2)
+                    {
+                        int total = 0;
+                        for (int i = 0; i < scores.Count; i++)
+                        {
+                            total += scores[i];
+                        }
+                        Console.WriteLine("\nThe Total Score is: " + total);
+                    }
+                    else if (choice == 3)
+                    {
+                        int total = 0;
+                        for (int i = 0; i < scores.Count; i++)
+                        {
+                            total += scores[i];
+                        }
+                        double average = (double)total / scores.Count;
+                        Console.WriteLine("\nThe Average Score: " + average);
+                    }
+                    else if (choice == 4)
+                    {
+                        Console.WriteLine("\nThe Program has Ended.");
+                        working = false;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nInvalid choice, Please try again and pick a number between 1 and 4.");
+                }
             }
         }
     }
